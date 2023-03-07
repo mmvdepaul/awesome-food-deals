@@ -18,7 +18,7 @@ class Restaurant(models.Model):
     deals = models.ManyToManyField(Deal, related_name="deals")
     rest_name = models.CharField(max_length=30)
     rest_location = models.ForeignKey('Location', null=True, on_delete=models.CASCADE)
-
+    image=models.ImageField(blank=True,null=True)
     def __str__(self) -> str:
         return self.rest_name
 
